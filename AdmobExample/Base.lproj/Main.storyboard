@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pj0-TI-rnC" customClass="GADBannerView">
+                                <rect key="frame" x="28" y="617" width="320" height="50"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="Roh-kB-l6j"/>
+                                    <constraint firstAttribute="width" constant="320" id="lqa-O1-Gak"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dK2-45-0Lq" customClass="GADNativeExpressAdView">
+                                <rect key="frame" x="28" y="270" width="320" height="198"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="320" id="bUl-LO-FAC"/>
+                                    <constraint firstAttribute="height" constant="198" id="up6-i0-iuz"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1VZ-w0-dZH" customClass="GADNativeContentAdView">
+                                <rect key="frame" x="28" y="20" width="320" height="204"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="320" id="5Kg-X1-oOk"/>
+                                    <constraint firstAttribute="height" constant="204" id="Hfd-A2-eXj"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="1VZ-w0-dZH" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="GCf-Wn-tos"/>
+                            <constraint firstItem="1VZ-w0-dZH" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="Hxq-5Y-jJp"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="pj0-TI-rnC" secondAttribute="bottom" id="McR-wM-RZm"/>
+                            <constraint firstItem="dK2-45-0Lq" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="daE-Gw-jPX"/>
+                            <constraint firstItem="pj0-TI-rnC" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="nWT-jp-FD2"/>
+                            <constraint firstItem="pj0-TI-rnC" firstAttribute="top" secondItem="dK2-45-0Lq" secondAttribute="bottom" constant="149" id="w2C-9V-LTM"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="bannerView" destination="pj0-TI-rnC" id="R8U-ek-vO3"/>
+                        <outlet property="nativeContentAdView" destination="1VZ-w0-dZH" id="tTp-XP-NnF"/>
+                        <outlet property="nativeExpressView" destination="dK2-45-0Lq" id="UpJ-Gr-Xjy"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="265.5" y="211.5"/>
+        </scene>
+    </scenes>
+</document>
